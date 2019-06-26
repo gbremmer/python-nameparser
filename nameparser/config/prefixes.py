@@ -1,47 +1,50 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-#: Name pieces that appear before a last name. Prefixes join to the piece
-#: that follows them to make one new piece. They can be chained together, e.g
-#: "von der" and "de la". Because they only appear in middle or last names,
-#: they also signifiy that all following name pieces should be in the same name
-#: part, for example, "von" will be joined to all following pieces that are not
-#: prefixes or suffixes, allowing recognition of double last names when they
-#: appear after a prefixes. So in "pennie von bergen wessels MD", "von" will
-#: join with all following name pieces until the suffix "MD", resulting in the
-#: correct parsing of the last name "von bergen wessels".
+#: Name pieces that appear before a last name. They join with the following piece.
 PREFIXES = set([
     'abu',
-    'bin',
+    'auf',
     'bon',
+    'bin',
     'da',
     'dal',
     'de',
-    'degli',
-    'dei',
     'del',
-    'dela',
-    'della',
-    'delle',
-    'delli',
-    'dello',
+    'dem',
     'der',
+    'degli', # means "from" in Italian
+    'de',
     'di',
     'dí',
-    'do',
-    'dos',
     'du',
+    'freiherrin', # See http://en.wikipedia.org/wiki/Ludwig_Freiherr_von_und_zu_der_Tann-Rathsamhausen
+    'heer',
+    'het',
+    'in',
     'ibn',
     'la',
     'le',
+    'op',
     'san',
-    'santa',
     'st',
     'ste',
+    # See http://www.dutchgenealogy.nl/tng/surnames-all.php
+    'ten',
+    'then',
+    'tho',
+    'thoe',
+    'ter',
+    'to',
     'van',
+    'vande',
+    # "vd" can be used to abbreviate "van de"/"van den"/"van der"
+    # see http://en.wikipedia.org/wiki/List_of_most_common_surnames_in_Europe#Netherlands
+    'vd', 
     'vel',
     'von',
-    'of',
-    'ten',
-    'der'
+    'und',
+    'zu',
+    "'t",
+    'vander', 'auf der', 'onder de', "aan 't", 'uit het', 'wa', 'voor de', 'ben', "van 't", 'al', 'in ’t', 'voor den', 'aan de', 'op de', 'du', "voor in 't", 'zur', 'del', 'van der', 'des', "l'", 'van het', 'von', 'van t', 'de la', 'do', 'das', 'van den', 'de', 'op ’t', 'mc', 'da', "d'", 'van  der', 'uit den', "in 't", 'het', 'dos', 'de de', 'ten', 'olde', 'bij de', 'in de', 'la', 'in den', 'op den', 'ter', 'op', 'uit de', "'t", "in't", 'et', 'el', 'in het', 'te', 'di', 'der', 'de las', "op 't", 'a', 'le', 'van la', 'in der', 'van', 'den', 'op het', 'tho', 'van de',
 ])
